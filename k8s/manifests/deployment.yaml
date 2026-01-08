@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: truck-logistics-frontend
+  namespace: truck-logistics
+  labels:
+    app: truck-logistics-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: truck-logistics-frontend
+  template:
+    metadata:
+      labels:
+        app: truck-logistics-frontend
+    spec:
+      containers:
+        - name: truck-logistics-frontend
+          image: nexus.arffy.com/projects/report_frontend:92c8fac6
+          ports:
+            - containerPort: 80
+          env:
+            - name: SEED_DB # to make seeders run only one time (for first replica only initially replicas: 1 and make deploy. then kubectl scale deployment truck-logistics-frontend --replicas=2)
+              value: "true"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: docker-auth

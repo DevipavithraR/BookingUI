@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@import "tailwindcss";
+@import "react-datepicker/dist/react-datepicker.css";
+
+:root {
+  --clr-primary: #111b38c7;
+  --clr-primar-light: #473b33;
+  --clr-secondary: #182542;
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-pumpkin: #fe6c00;
+  --clr-silver: #a8a5a6;
+  --clr-silver-v1: #bdbabb;
+  --clr-scarlet: #fe1e00;
+  --clr-scarlet-v1: rgb(254, 30, 0, 0.79);
+  --clr-green: #00fe93;
+  --clr-yellow: #fec80a;
+  --clr-jet: #302924;
+  --clr-peach: #ffc397;
+  --font-family-bai: "Bai Jamjuree", sans-serif;
+  --transition-default: all 300ms ease-in-out;
+}
+
+body {
+  font-family: var(--font-family-bai);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+button {
+  cursor: pointer;
+}
+
+.img-fit-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-white {
+  color: var(--clr-white);
+}
+.text-silver-v1 {
+  color: var(--clr-silver-v1);
+}
+.text-scarlet {
+  color: var(--clr-scarlet);
+}
+.text-green {
+  color: var(--clr-green);
+}
+.bg-jet {
+  background: var(--clr-jet);
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* commons */
+.lg-value {
+  font-size: 24px;
+  font-weight: 600;
+}
+.grid-common {
+  background-color: var(--clr-primary);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 24px;
+  color: var(--clr-white);
+  padding: 24px;
+}
+.grid-c-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.grid-c-title-text {
+  font-weight: 400;
+  color: var(--clr-silver);
+}
+.grid-c-title-icon img {
+  width: 24px;
+}
+
+@media screen and (max-width: 1400px) {
+  .grid-common {
+    padding: 16px;
+  }
+  body {
+    font-size: 14px !important;
+  }
+}
+
+select.glass-input option {
+  background-color: rgb(31, 41, 55); /* bg-gray-800 */
+  color: white;
+}
+
+select.glass-input:focus {
+  background-color: rgba(31, 41, 55, 0.3); /* bg-gray-800/30 */
+  color: white;
+}
+
+.datePickerPopper {
+  z-index: 2000 !important;
+}
+.date-picker-popper {
+  z-index: 9999 !important;
+}
+
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+
+.react-datepicker__tab-loop {
+  z-index: 9999 !important;
+}
+
+/* Custom React Datepicker Styles */
+.react-datepicker {
+  font-family: var(--font-family-bai);
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.react-datepicker__header {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  padding-top: 12px;
+}
+
+.react-datepicker__day-names {
+  background-color: #f3f4f6;
+}
+
+.react-datepicker__day-name {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.react-datepicker__day {
+  color: #374151;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+.react-datepicker__day:hover {
+  background-color: #e5e7eb;
+}
+
+.react-datepicker__day--selected {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+.react-datepicker__day--selected:hover {
+  background-color: #2563eb;
+}
+
+/* Dark mode styles for datepicker */
+.dark .react-datepicker {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+}
+
+.dark .react-datepicker__header {
+  background-color: #111827;
+  border-bottom: 1px solid #374151;
+}
+
+.dark .react-datepicker__day-names {
+  background-color: #111827;
+}
+
+.dark .react-datepicker__day-name {
+  color: #9ca3af;
+}
+
+.dark .react-datepicker__day {
+  color: #d1d5db;
+}
+
+.dark .react-datepicker__day:hover {
+  background-color: #374151;
+}
+
+.dark .react-datepicker__day--selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.dark .react-datepicker__day--selected:hover {
+  background-color: #2563eb;
+}
+
+.dark .react-datepicker__current-month {
+  color: #f9fafb;
+}
+
+.dark .react-datepicker__navigation {
+  border-color: #f9fafb;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+
+.custom-scrollbar.light::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.7);
+}
+
+.custom-scrollbar.dark::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+.custom-scrollbar.light::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.8);
+}
+
+.custom-scrollbar.dark::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Date input field styles */
+.inputClassLight {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  color: #374151;
+  min-width: 140px;
+  transition: all 0.2s ease-in-out;
+}
+
+.inputClassLight:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.inputClassDark {
+  padding: 8px 12px;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #1f2937;
+  color: #f9fafb;
+  min-width: 140px;
+  transition: all 0.2s ease-in-out;
+}
+
+.inputClassDark:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.labelClassLight {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.labelClassDark {
+  font-size: 14px;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 6px;
+}
+
+.clearButtonClassLight {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: white;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.clearButtonClassLight:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.clearButtonClassLight:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.clearButtonClassDark {
+  padding: 8px 16px;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  background-color: #1f2937;
+  color: #d1d5db;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.clearButtonClassDark:hover {
+  background-color: #374151;
+  border-color: #6b7280;
+}
+
+.clearButtonClassDark:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
